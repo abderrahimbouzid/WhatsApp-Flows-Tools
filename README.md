@@ -35,3 +35,29 @@ MIIE...
 6. Use the new Glitch URL as your endpoint URL, eg: `https://project-name.glitch.me`. You can find this URL by clicking on `Share` on top right, then copy the `Live Site` URL.
 7. Edit `src/flow.js` with your logic to navigate between the Flow screens.
 8. Click on the `Logs` tab at the bottom to view server logs. The logs section also has a button to attach a debugger via Chrome devtools.
+
+## Deploying to Vercel
+
+To deploy this project on Vercel, follow these steps:
+
+1. Ensure you have the [Vercel CLI](https://vercel.com/download) installed or use the Vercel web dashboard.
+
+2. Set the following environment variables in your Vercel project settings:
+   - `APP_SECRET`: Your app secret for request signature validation.
+   - `PRIVATE_KEY`: Your RSA private key for decrypting requests.
+   - `PASSPHRASE`: (Optional) Passphrase for your private key if applicable.
+
+3. The project is configured to use the `api/index.js` as the serverless function entry point.
+
+4. You can deploy using the Vercel CLI with:
+   ```
+   vercel --prod
+   ```
+
+5. For local development, use:
+   ```
+   npm start
+   ```
+
+Make sure your environment variables are correctly set in Vercel for the endpoint to work properly.
+   vercel --prod
