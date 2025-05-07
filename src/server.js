@@ -87,9 +87,7 @@ app.get("/", (req, res) => {
 Checkout README.md to start.</pre>`);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port: ${PORT}`);
-});
+export default app;
 
 function isRequestSignatureValid(req) {
   if(!APP_SECRET) {
